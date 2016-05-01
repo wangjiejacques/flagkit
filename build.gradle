@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+    defaultConfig {
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'flag-kit'
+
+    publishedGroupId = 'com.jwang123.flagkit'
+    libraryName = 'FlagKit'
+    artifact = 'flagkit'
+
+    libraryDescription = 'Flag kit for Android'
+
+    siteUrl = 'https://github.com/WANGjieJacques/flagkit'
+    gitUrl = 'https://github.com/WANGjieJacques/flagkit.git'
+
+    libraryVersion = '1.0'
+
+    developerId = 'jwang123'
+    developerName = 'WANG Jie'
+    developerEmail = 'jiewang1022@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+}
+// Place it at the end of the file
+apply from: 'installv1.gradle'
+apply from: 'bintrayv1.gradle'
