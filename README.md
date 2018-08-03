@@ -8,3 +8,6 @@ Usage
     FlagKit.drawableWithFlag(context, "Conutry code");
     
     FlagKit.drawableWithFlag(context, "US");
+    
+# LICENSE
+FlagKit is released under the MIT license.
